@@ -55,13 +55,17 @@ img{display:block;max-width:100%}
 @media (prefers-reduced-motion:reduce){.badge{animation:none}}
 
 .chip{
-  display:inline-flex;align-items:center;gap:8px;
+  display:inline-flex;align-items:center;gap:12px;
   font-family:var(--head);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
-  padding:8px 16px;border-radius:999px;background:var(--black);color:var(--acid);
+  padding:9px 24px;border-radius:999px;background:var(--black);color:var(--acid);
   border:2px dashed rgba(236,248,110,.6);
 }
-.chip i{width:8px;height:8px;border-radius:50%;background:var(--acid);animation:pulse 1.6s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.typing{display:inline-flex;align-items:center;gap:4px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--acid);opacity:.25;animation:typing 1.4s infinite}
+.typing i:nth-child(2){animation-delay:.2s}
+.typing i:nth-child(3){animation-delay:.4s}
+@keyframes typing{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.typing i{animation:none;opacity:.7}}
 
 h1{
   font-family:var(--head);font-weight:900;text-transform:uppercase;
@@ -126,7 +130,7 @@ footer{position:relative;z-index:1;font-size:13px;color:rgba(255,255,255,.45)}
   <main class="main">
     <img class="badge" src="img/badge-circle.png" alt="Живем">
 
-    <span class="chip"><i></i>Готовим материалы</span>
+    <span class="chip">Готовим материалы<span class="typing" aria-hidden="true"><i></i><i></i><i></i></span></span>
 
     <h1>Сайт скоро.<br><span>Мы уже здесь</span></h1>
 
