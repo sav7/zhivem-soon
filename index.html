@@ -94,6 +94,7 @@ h1 span{color:var(--acid)}
 .card b{font-family:var(--head);font-weight:900;font-size:20px;text-transform:uppercase;line-height:1}
 .card p{font-size:14px;font-weight:600;line-height:1.35;opacity:.85}
 .card .go{margin-top:auto;padding-top:8px;font-family:var(--head);font-weight:800;font-size:14px}
+.card .arr{display:none}
 
 /* звонилка — вторым планом */
 .extra{
@@ -117,6 +118,10 @@ footer{position:relative;z-index:1;font-size:13px;color:rgba(255,255,255,.45)}
   .card{padding:18px;align-items:center}
   .card .txt{align-self:auto}
   .card .go{display:none}
+  .card .arr{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--black)}
+  .card .arr svg{width:18px;height:18px}
+  .card.acid .arr svg{color:var(--acid)} .card.blue .arr svg{color:var(--blue)}
+  .card:active{transform:scale(.98)}
   .deco-blue{width:38vw;top:-1%;left:-18%;opacity:.9}
   .deco-orange{display:none}
 }
@@ -141,10 +146,12 @@ footer{position:relative;z-index:1;font-size:13px;color:rgba(255,255,255,.45)}
       <a class="card acid" id="link-channel" target="_blank" rel="noopener">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15 9a4 4 0 0 1 0 6"/><path d="M18 6a8 8 0 0 1 0 12"/></svg></span>
         <span class="txt"><b>Канал</b><p>Визовые новости и советы</p><span class="go">Читать →</span></span>
+        <span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
       </a>
       <a class="card blue" id="link-support" target="_blank" rel="noopener">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-7l-5 3.5V18a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z"/><circle cx="8" cy="11" r="1.3" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r="1.3" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r="1.3" fill="currentColor" stroke="none"/></svg></span>
         <span class="txt"><b>Поддержка</b><p>Задайте вопрос, вам ответит человек</p><span class="go">Написать →</span></span>
+        <span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
       </a>
     </div>
 
