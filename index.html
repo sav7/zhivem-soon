@@ -79,7 +79,7 @@ h1 span{color:var(--acid)}
 .cards{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .card{
   position:relative;display:flex;align-items:flex-start;text-align:left;gap:14px;
-  padding:18px 20px;border-radius:26px;color:var(--black);
+  padding:22px;border-radius:26px;color:var(--black);
   transition:transform .2s ease;
 }
 .card::after{content:"";position:absolute;inset:7px;border-radius:20px;border:2.5px dashed rgba(17,17,17,.75);pointer-events:none}
@@ -90,10 +90,10 @@ h1 span{color:var(--acid)}
 .card .ic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--black);display:grid;place-items:center}
 .card .ic svg{width:24px;height:24px}
 .card.acid .ic svg{color:var(--acid)} .card.blue .ic svg{color:var(--blue)}
-.card .txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.card .txt{flex:1;min-width:0;align-self:stretch;display:flex;flex-direction:column;gap:4px}
 .card b{font-family:var(--head);font-weight:900;font-size:20px;text-transform:uppercase;line-height:1}
 .card p{font-size:14px;font-weight:600;line-height:1.35;opacity:.85}
-.card .go{margin-top:2px;font-family:var(--head);font-weight:800;font-size:14px}
+.card .go{margin-top:auto;padding-top:8px;font-family:var(--head);font-weight:800;font-size:14px}
 
 /* звонилка — вторым планом */
 .extra{
@@ -114,7 +114,8 @@ footer{position:relative;z-index:1;font-size:13px;color:rgba(255,255,255,.45)}
   .page{padding-top:36px;gap:22px}
   .cards{grid-template-columns:1fr}
   .lead{font-size:min(16px,3.55vw)}
-  .card{padding:16px 18px;align-items:center}
+  .card{padding:18px;align-items:center}
+  .card .txt{align-self:auto}
   .card .go{display:none}
   .deco-blue{width:38vw;top:-1%;left:-18%;opacity:.9}
   .deco-orange{display:none}
